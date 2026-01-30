@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaastu Vision Pro 2026 • Cosmic Harmony Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #FFD700;
+            --primary-indigo: #4B0082;
+            --primary-emerald: #006400;
+            --primary-saffron: #FF9933;
+            --primary-crimson: #DC143C;
+            --primary-teal: #20B2AA;
+            --bg-dark: #0a0e2a;
+            --bg-darker: #05081a;
+            --bg-card: rgba(20, 15, 45, 0.95);
+            --text-light: #FFF8E1;
+            --text-dim: #b8b8d0;
+            --shadow-glow: 0 0 25px rgba(255, 215, 0, 0.4);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-darker);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(75, 0, 130, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 30%);
+        }
+
+        /* Header & Navigation */
+        .app-header {
+            background: rgba(15, 10, 35, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid var(--primary-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-saffron));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-saffron));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--primary-teal);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: rgba(30, 25, 60, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            color: var(--text-light);
+            padding: 0.7rem 1.2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: rgba(75, 0, 130, 0.6);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Module Container */
+        .module-container {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .module-container.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Module Header */
+        .module-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(20, 15, 45, 0.9), rgba(75, 0, 130, 0.7));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .module-title {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-saffron));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .module-subtitle {
+            color: var(--primary-teal);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tool-card {
+            background: var(--bg-card);
+            border-radius: 18px;
+            padding: 1.8rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: var(--transition);
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+        }
+
+        .tool-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-indigo), var(--primary-crimson));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid var(--primary-gold);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .tool-title {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tool-desc {
+            color: var(--text-dim);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tool-btn {
+            background: linear-gradient(45deg, var(--primary-indigo), var(--primary-crimson));
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .tool-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(75, 0, 130, 0.4);
+        }
+
+        /* Analysis Container */
+        .analysis-container {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+        }
+
+        /* Input Groups */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-label {
+            display: block;
+            color: var(--primary-teal);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 5, 30, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        select.input-field {
+            cursor: pointer;
+        }
+
+        /* Analysis Grid */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: rgba(25, 20, 55, 0.9);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-teal);
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--primary-teal);
+            font-size: 1rem;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: rgba(30, 25, 65, 0.9);
+            border-radius: 15px;
+            padding: 1.8rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary-gold);
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
+            font-size: 1.4rem;
+        }
+
+        /* Compass Styles */
+        .compass-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .compass-face {
+            width: 250px;
+            height: 250px;
+            background: rgba(20, 15, 45, 0.9);
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid var(--primary-gold);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3),
+                        inset 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .compass-needle {
+            position: absolute;
+            width: 100px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-crimson), var(--primary-indigo));
+            top: 50%;
+            left: 50%;
+            transform-origin: left center;
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(220, 20, 60, 0.7);
+        }
+
+        .compass-direction {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin: 1rem 0;
+        }
+
+        /* Energy Visualization */
+        .energy-canvas {
+            width: 100%;
+            height: 300px;
+            background: rgba(10, 5, 30, 0.8);
+            border-radius: 15px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .energy-particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(0.5); opacity: 0.8; }
+            25% { transform: translate(100px, 50px) scale(0.8); opacity: 0.6; }
+            50% { transform: translate(50px, 150px) scale(1); opacity: 0.4; }
+            75% { transform: translate(-50px, 100px) scale(0.7); opacity: 0.6; }
+            100% { transform: translate(0, 0) scale(0.5); opacity: 0.8; }
+        }
+
+        /* Report Styles */
+        .report-container {
+            background: rgba(25, 20, 55, 0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            display: none;
+        }
+
+        .report-container.active {
+            display: block;
+        }
+
+        .report-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-gold);
+        }
+
+        .report-title {
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Button Styles */
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-saffron));
+            color: var(--bg-darker);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, var(--primary-indigo), var(--primary-crimson));
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Footer */
+        .app-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: var(--text-dim);
+        }
+
+        .certification {
+            display: inline-block;
+            background: rgba(30, 20, 60, 0.9);
+            border: 2px solid var(--primary-gold);
+            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            margin-top: 1rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-indigo);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            z-index: 10000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            max-width: 400px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            background: var(--primary-emerald);
+        }
+
+        .toast.error {
+            background: var(--primary-crimson);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .app-container {
+                padding: 1.5rem;
+            }
+            
+            .module-title {
+                font-size: 2rem;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .app-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                justify-content: center;
+            }
+            
+            .nav-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .module-header {
+                padding: 1.5rem;
+            }
+            
+            .module-title {
+                font-size: 1.8rem;
+            }
+            
+            .compass-face {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .app-container {
+                padding: 1rem;
+            }
+            
+            .tool-card {
+                padding: 1.5rem;
+            }
+            
+            .tool-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+            
+            .tool-title {
+                font-size: 1.3rem;
+            }
+            
+            .analysis-container {
+                padding: 1.5rem;
+            }
+            
+            .compass-face {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .toast {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .app-header, .nav-menu, .btn, .toast {
+                display: none !important;
+            }
+            
+            .analysis-container, .results-section, .report-container {
+                break-inside: avoid;
+                box-shadow: none !important;
+                border: 1px solid #000 !important;
+                background: white !important;
+                color: black !important;
+            }
+            
+            .module-container {
+                display: block !important;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="app-header">
+        <div class="logo">
+            <div class="logo-icon">🕉️</div>
+            <div class="logo-text">
+                <h1>VAASTU VISION PRO</h1>
+                <p>Cosmic Harmony • 2026 Edition</p>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <button class="nav-btn active" data-module="dashboard">
+                <i class="fas fa-home"></i> Dashboard
+            </button>
+            <button class="nav-btn" data-module="compass">
+                <i class="fas fa-compass"></i> Compass
+            </button>
+            <button class="nav-btn" data-module="plot">
+                <i class="fas fa-ruler-combined"></i> Plot Analyzer
+            </button>
+            <button class="nav-btn" data-module="rooms">
+                <i class="fas fa-bed"></i> Room Optimizer
+            </button>
+            <button class="nav-btn" data-module="energy">
+                <i class="fas fa-atom"></i> Energy Visualizer
+            </button>
+            <button class="nav-btn" data-module="report">
+                <i class="fas fa-file-alt"></i> Report
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="app-container">
+        <!-- Dashboard Module -->
+        <section id="dashboard" class="module-container active">
+            <div class="module-header">
+                <h2 class="module-title">Dashboard Overview</h2>
+                <p class="module-subtitle">Welcome to your personalized Vaastu analysis toolkit. Select any tool to begin your journey to cosmic harmony.</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="tool-card" data-module="compass">
+                    <div class="tool-icon">🧭</div>
+                    <h3 class="tool-title">Smart Compass</h3>
+                    <p class="tool-desc">Precisely determine cardinal directions using device sensors or manual input. Essential for accurate Vaastu analysis.</p>
+                    <button class="tool-btn" onclick="showModule('compass')">Launch Tool</button>
+                </div>
+                
+                <div class="tool-card" data-module="plot">
+                    <div class="tool-icon">📐</div>
+                    <h3 class="tool-title">Plot Analyzer</h3>
+                    <p class="tool-desc">Analyze your land plot dimensions, shape, and slope. Get instant Vaastu compliance score and zone recommendations.</p>
+                    <button class="tool-btn" onclick="showModule('plot')">Launch Tool</button>
+                </div>
+                
+                <div class="tool-card" data-module="rooms">
+                    <div class="tool-icon">🛏️</div>
+                    <h3 class="tool-title">Room Optimizer</h3>
+                    <p class="tool-desc">Optimal placement for every room based on direction, dimensions, and family needs. Modern lifestyle adaptations included.</p>
+                    <button class="tool-btn" onclick="showModule('rooms')">Launch Tool</button>
+                </div>
+                
+                <div class="tool-card" data-module="energy">
+                    <div class="tool-icon">🌀</div>
+                    <h3 class="tool-title">Energy Visualizer</h3>
+                    <p class="tool-desc">See cosmic energy flow through your space with advanced visualization. Identify blockages and enhancement zones.</p>
+                    <button class="tool-btn" onclick="showModule('energy')">Launch Tool</button>
+                </div>
+                
+                <div class="tool-card" data-module="report">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">Report Generator</h3>
+                    <p class="tool-desc">Generate comprehensive PDF-ready reports with charts, diagrams, and personalized recommendations for your space.</p>
+                    <button class="tool-btn" onclick="showModule('report')">Launch Tool</button>
+                </div>
+                
+                <div class="tool-card" data-module="learn">
+                    <div class="tool-icon">📚</div>
+                    <h3 class="tool-title">Vaastu Wisdom</h3>
+                    <p class="tool-desc">Learn the ancient science of Vaastu Shastra with modern interpretations. Explore principles, benefits, and practical applications.</p>
+                    <button class="tool-btn" onclick="showModule('learn')">Launch Tool</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compass Module -->
+        <section id="compass" class="module-container">
+            <div class="module-header">
+                <h2 class="module-title">Smart Direction Finder</h2>
+                <p class="module-subtitle">Determine true North with precision. Use device sensors or manual input for accurate Vaastu direction alignment.</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="compass-container">
+                    <div class="compass-face">
+                        <div class="compass-needle" id="compassNeedle"></div>
+                    </div>
+                    <div class="compass-direction" id="directionText">NORTH</div>
+                    
+                    <div style="width: 100%; max-width: 400px; margin-top: 2rem;">
+                        <div class="input-group">
+                            <label class="input-label">Manual Direction Adjustment</label>
+                            <input type="range" min="0" max="360" value="0" class="input-field" id="directionSlider" style="height: 12px;">
+                            <div id="sliderValue" style="text-align: center; margin-top: 0.5rem; color: var(--primary-gold); font-weight: 600;">0° (North)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-section" id="compassResults">
+                    <div class="results-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Vaastu Guidance</h3>
+                    </div>
+                    <p id="compassGuidance">North is governed by Kubera (God of Wealth). Ideal for: Living room, Office, Water bodies, Main entrance. Avoid: Heavy storage, Toilets, Kitchen.</p>
+                    <p style="margin-top: 1rem;"><strong>Colors:</strong> White, Light Blue, Silver</p>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="saveCompassData()">
+                        <i class="fas fa-save"></i> Save Direction
+                    </button>
+                    <button class="btn btn-secondary" onclick="showModule('dashboard')">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plot Analyzer Module -->
+        <section id="plot" class="module-container">
+            <div class="module-header">
+                <h2 class="module-title">Plot Analysis Calculator</h2>
+                <p class="module-subtitle">Enter your plot dimensions and characteristics for comprehensive Vaastu compliance analysis with zone recommendations.</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="input-group">
+                    <label class="input-label">Plot Length (Feet)</label>
+                    <input type="number" class="input-field" id="plotLength" placeholder="Enter length" value="60" min="1">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Plot Width (Feet)</label>
+                    <input type="number" class="input-field" id="plotWidth" placeholder="Enter width" value="40" min="1">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Plot Shape</label>
+                    <select class="input-field" id="plotShape">
+                        <option value="rectangle">Rectangle (Ideal)</option>
+                        <option value="square">Square (Most Auspicious)</option>
+                        <option value="lshape">L-Shape (Requires Remedies)</option>
+                        <option value="irregular">Irregular (Complex Analysis)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Slope Direction</label>
+                    <select class="input-field" id="slopeDirection">
+                        <option value="north">North (Highly Auspicious)</option>
+                        <option value="east">East (Very Auspicious)</option>
+                        <option value="northeast">Northeast (Most Auspicious)</option>
+                        <option value="south">South (Requires Remedies)</option>
+                        <option value="west">West (Neutral)</option>
+                        <option value="southwest">Southwest (Challenging)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="analyzePlot()" style="width: 100%; margin: 1rem 0;">
+                    <i class="fas fa-chart-bar"></i> Analyze Plot Vaastu
+                </button>
+                
+                <div class="results-section" id="plotResults">
+                    <div class="results-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Plot Analysis Results</h3>
+                    </div>
+                    
+                    <div class="analysis-grid">
+                        <div class="metric-card">
+                            <div class="metric-value" id="vaastuScore">87%</div>
+                            <div class="metric-label">Vaastu Compliance</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="plotRatio">1:1.5</div>
+                            <div class="metric-label">Optimal Ratio</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="zoneBalance">88%</div>
+                            <div class="metric-label">Zone Balance</div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group" style="margin-top: 1.5rem;">
+                        <label class="input-label">Assessment</label>
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3);">
+                            <p id="plotAssessment">Your rectangular plot with northeast slope shows excellent Vaastu potential. The dimensions follow the ideal 3:2 ratio recommended in ancient texts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Recommended Zones</label>
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3);">
+                            <ul style="padding-left: 1.5rem;">
+                                <li><strong>Northeast:</strong> Water body, meditation space, main entrance</li>
+                                <li><strong>Southeast:</strong> Kitchen, electrical room, fire elements</li>
+                                <li><strong>Southwest:</strong> Master bedroom, heavy storage, stability zone</li>
+                                <li><strong>Northwest:</strong> Guest room, bathroom, movement zone</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="savePlotAnalysis()">
+                        <i class="fas fa-download"></i> Save Analysis
+                    </button>
+                    <button class="btn btn-secondary" onclick="showModule('dashboard')">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Room Optimizer Module -->
+        <section id="rooms" class="module-container">
+            <div class="module-header">
+                <h2 class="module-title">Room Placement Optimizer</h2>
+                <p class="module-subtitle">Get optimal room placements based on Vaastu principles. Enter your home details for personalized recommendations.</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="input-group">
+                    <label class="input-label">Main Entrance Direction</label>
+                    <select class="input-field" id="entranceDirection">
+                        <option value="north">North</option>
+                        <option value="northeast">Northeast (Most Auspicious)</option>
+                        <option value="east">East</option>
+                        <option value="southeast">Southeast</option>
+                        <option value="south">South</option>
+                        <option value="southwest">Southwest</option>
+                        <option value="west">West</option>
+                        <option value="northwest">Northwest</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Total Rooms in Home</label>
+                    <select class="input-field" id="totalRooms">
+                        <option value="2">2 Rooms</option>
+                        <option value="3">3 Rooms</option>
+                        <option value="4" selected>4 Rooms</option>
+                        <option value="5">5 Rooms</option>
+                        <option value="6">6+ Rooms</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Family Type</label>
+                    <select class="input-field" id="familyType">
+                        <option value="nuclear">Nuclear Family</option>
+                        <option value="joint">Joint Family</option>
+                        <option value="couple">Couple</option>
+                        <option value="single">Single Person</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="optimizeRooms()" style="width: 100%; margin: 1rem 0;">
+                    <i class="fas fa-cogs"></i> Generate Room Layout
+                </button>
+                
+                <div class="results-section" id="roomResults">
+                    <div class="results-header">
+                        <i class="fas fa-home"></i>
+                        <h3>Optimal Room Placement</h3>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Recommended Layout</label>
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3); min-height: 200px;">
+                            <div id="roomLayout">
+                                <p>Based on your entrance facing Northeast, here's the optimal room placement:</p>
+                                <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                                    <li><strong>Master Bedroom:</strong> Southwest corner for stability</li>
+                                    <li><strong>Kitchen:</strong> Southeast corner for fire element</li>
+                                    <li><strong>Living Room:</strong> North or East zone</li>
+                                    <li><strong>Children's Room:</strong> Northwest for mental clarity</li>
+                                    <li><strong>Pooja Room:</strong> Northeast corner for spiritual connection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(0, 30, 60, 0.4); padding: 1rem; border-radius: 12px; margin-top: 1.5rem; border-left: 3px solid var(--primary-gold);">
+                        <strong style="color: var(--primary-gold);">⚠️ Important:</strong> The central area (Brahmasthan) should always remain open and clutter-free. Avoid placing heavy furniture or toilets in this area.
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="saveRoomLayout()">
+                        <i class="fas fa-save"></i> Save Layout
+                    </button>
+                    <button class="btn btn-secondary" onclick="showModule('dashboard')">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy Visualizer Module -->
+        <section id="energy" class="module-container">
+            <div class="module-header">
+                <h2 class="module-title">Cosmic Energy Flow Visualizer</h2>
+                <p class="module-subtitle">Visualize positive and negative energy flows through your space. Identify blockages and enhancement opportunities.</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="energy-canvas" id="energyCanvas">
+                    <!-- Energy particles will be generated here -->
+                </div>
+                
+                <div class="analysis-grid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="positiveEnergy">+92%</div>
+                        <div class="metric-label">Positive Energy Flow</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="negativeEnergy">-8%</div>
+                        <div class="metric-label">Negative Energy Flow</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="harmonyIndex">94%</div>
+                        <div class="metric-label">Harmony Index</div>
+                    </div>
+                </div>
+                
+                <div class="results-section active">
+                    <div class="results-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Energy Analysis Insights</h3>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3);">
+                            <p><strong>Northeast Zone:</strong> Strong positive energy flow (ideal for water elements)</p>
+                            <p><strong>Southeast Corner:</strong> Minor blockage detected near electrical panel</p>
+                            <p><strong>Central Brahmasthan:</strong> Clear and balanced energy</p>
+                            <p><strong>Southwest Area:</strong> Stable grounding energy</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(0, 100, 0, 0.2); padding: 1rem; border-radius: 12px; margin-top: 1rem;">
+                        <strong>Remedy:</strong> Place a copper pyramid near the southeast electrical panel to neutralize EMF disturbances.
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="generateEnergyReport()">
+                        <i class="fas fa-file-download"></i> Generate Energy Report
+                    </button>
+                    <button class="btn btn-secondary" onclick="showModule('dashboard')">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Generator Module -->
+        <section id="report" class="module-container">
+            <div class="module-header">
+                <h2 class="module-title">Comprehensive Vaastu Report</h2>
+                <p class="module-subtitle">Generate a professional, PDF-ready Vaastu analysis report with charts, recommendations, and remedy plans for your space.</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="input-group">
+                    <label class="input-label">Property Address</label>
+                    <input type="text" class="input-field" id="propertyAddress" placeholder="123 Harmony Lane, Serene City" value="Your Sacred Space">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Report Type</label>
+                    <select class="input-field" id="reportType">
+                        <option value="residential">Residential Property</option>
+                        <option value="commercial">Commercial Space</option>
+                        <option value="plot">Land Plot Only</option>
+                        <option value="comprehensive">Comprehensive Analysis</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="generateReport()" style="width: 100%; margin: 1rem 0;">
+                    <i class="fas fa-file-alt"></i> Generate Professional Report
+                </button>
+                
+                <div class="report-container" id="vaastuReport">
+                    <div class="report-header">
+                        <div class="report-title">VAASTU VISION PRO REPORT</div>
+                        <div style="color: var(--primary-teal); margin-top: 0.5rem;">Generated on <span id="reportDate">January 30, 2026</span></div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Executive Summary</label>
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3); min-height: 100px;">
+                            <p>This comprehensive Vaastu analysis reveals a highly harmonious property with 87% cosmic alignment. The rectangular plot with northeast slope creates exceptional energy flow potential.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Vaastu Compliance Score</label>
+                        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-gold);">87%</div>
+                                <div style="color: var(--primary-teal);">Overall Score</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-emerald);">92%</div>
+                                <div style="color: var(--primary-teal);">Energy Flow</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-teal);">85%</div>
+                                <div style="color: var(--primary-teal);">Room Placement</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Critical Recommendations</label>
+                        <div class="input-field" style="background: rgba(0, 0, 0, 0.3);">
+                            <ul style="padding-left: 1.5rem;">
+                                <li>Place copper pyramid near southeast electrical panel</li>
+                                <li>Install water feature in northeast zone</li>
+                                <li>Relocate heavy storage from northwest to southwest</li>
+                                <li>Keep Brahmasthan (central area) clutter-free</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(0, 30, 60, 0.4); border-radius: 12px;">
+                        <div style="font-weight: 600; color: var(--primary-gold); margin-bottom: 0.5rem;">Certified by International Institute of Vaastu Science</div>
+                        <div style="color: var(--text-dim);">Report ID: VVP-2026-78945 • Valid until: January 30, 2027</div>
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="printReport()">
+                        <i class="fas fa-print"></i> Print/Save as PDF
+                    </button>
+                    <button class="btn btn-secondary" onclick="showModule('dashboard')">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div>Vaastu Vision Pro 2026 • The World's Most Advanced Digital Vaastu Toolkit</div>
+        <div style="margin: 0.5rem 0;">Certified by International Institute of Vaastu Science (IIVS). Designed and Created by Samar Jeet Jamwal</div>
+        <div class="certification">ॐ सर्वे भवन्तु सुखिनः • May All Be Happy</div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <script>
+        // ======================
+        // CORE APPLICATION LOGIC
+        // ======================
+
+        // Application State
+        const appState = {
+            currentDirection: 0,
+            plotData: null,
+            roomLayout: null,
+            energyData: null,
+            savedReports: []
+        };
+
+        // Module Navigation
+        function showModule(moduleId) {
+            // Hide all modules
+            document.querySelectorAll('.module-container').forEach(module => {
+                module.classList.remove('active');
+            });
+            
+            // Show selected module
+            document.getElementById(moduleId).classList.add('active');
+            
+            // Update navigation buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.getAttribute('data-module') === moduleId) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Initialize module-specific features
+            if(moduleId === 'compass') {
+                initializeCompass();
+            } else if(moduleId === 'energy') {
+                initializeEnergyVisualizer();
+            } else if(moduleId === 'report') {
+                updateReportDate();
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize navigation buttons
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const moduleId = btn.getAttribute('data-module');
+                showModule(moduleId);
+            });
+        });
+
+        // Initialize tool cards
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if(!e.target.classList.contains('tool-btn')) {
+                    const moduleId = card.getAttribute('data-module');
+                    showModule(moduleId);
+                }
+            });
+        });
+
+        // ======================
+        // COMPASS FUNCTIONALITY
+        // ======================
+
+        function initializeCompass() {
+            const slider = document.getElementById('directionSlider');
+            const needle = document.getElementById('compassNeedle');
+            const directionText = document.getElementById('directionText');
+            const sliderValue = document.getElementById('sliderValue');
+            const results = document.getElementById('compassResults');
+            
+            // Set initial state
+            updateCompass(0);
+            
+            // Add event listener to slider
+            slider.addEventListener('input', function() {
+                updateCompass(this.value);
+            });
+            
+            // Try to use device orientation if available
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', handleOrientation, true);
+            }
+            
+            function updateCompass(degrees) {
+                const normalized = degrees % 360;
+                const needleRotation = -normalized;
+                
+                // Update needle
+                needle.style.transform = `translate(-50%, -50%) rotate(${needleRotation}deg)`;
+                
+                // Determine direction
+                let direction = "NORTH";
+                let guidance = "";
+                
+                if (normalized > 22.5 && normalized <= 67.5) direction = "NORTHEAST";
+                else if (normalized > 67.5 && normalized <= 112.5) direction = "EAST";
+                else if (normalized > 112.5 && normalized <= 157.5) direction = "SOUTHEAST";
+                else if (normalized > 157.5 && normalized <= 202.5) direction = "SOUTH";
+                else if (normalized > 202.5 && normalized <= 247.5) direction = "SOUTHWEST";
+                else if (normalized > 247.5 && normalized <= 292.5) direction = "WEST";
+                else if (normalized > 292.5 && normalized <= 337.5) direction = "NORTHWEST";
+                
+                // Update displays
+                directionText.textContent = direction;
+                sliderValue.textContent = `${Math.round(normalized)}° (${direction})`;
+                
+                // Update guidance based on direction
+                switch(direction) {
+                    case "NORTH":
+                        guidance = "North is governed by Kubera (God of Wealth). Ideal for: Living room, Office, Water bodies, Main entrance. Avoid: Heavy storage, Toilets, Kitchen.";
+                        break;
+                    case "NORTHEAST":
+                        guidance = "Northeast is the most sacred direction, ruled by Lord Shiva. Ideal for: Puja room, Meditation space, Water elements. Keep this area clean and elevated.";
+                        break;
+                    case "EAST":
+                        guidance = "East is governed by Sun God (Surya). Ideal for: Living room, Study, Main entrance. Allows morning sunlight which brings health and vitality.";
+                        break;
+                    case "SOUTHEAST":
+                        guidance = "Southeast is the fire zone, ruled by Agni. Ideal for: Kitchen, Electrical appliances. The cook should face east while cooking.";
+                        break;
+                    case "SOUTH":
+                        guidance = "South is ruled by Yama. Ideal for: Heavy furniture, Storage, Staircase. Avoid: Main entrance, Bedrooms, Water elements.";
+                        break;
+                    case "SOUTHWEST":
+                        guidance = "Southwest is the stability zone. Ideal for: Master bedroom, Owner's room, Heavy items. Provides stability and relationship harmony.";
+                        break;
+                    case "WEST":
+                        guidance = "West is ruled by Varuna (God of Water). Ideal for: Children's room, Study, Dining area. Good for children's education and creativity.";
+                        break;
+                    case "NORTHWEST":
+                        guidance = "Northwest is the movement zone, ruled by Vayu. Ideal for: Guest room, Bathroom, Storage. Activates travel and networking opportunities.";
+                        break;
+                }
+                
+                document.getElementById('compassGuidance').textContent = guidance;
+                results.classList.add('active');
+                
+                // Save to state
+                appState.currentDirection = normalized;
+            }
+            
+            function handleOrientation(event) {
+                if (event.alpha !== null) {
+                    updateCompass(event.alpha);
+                    slider.value = event.alpha;
+                }
+            }
+        }
+
+        function saveCompassData() {
+            const direction = document.getElementById('directionText').textContent;
+            showToast(`Direction saved: ${direction}. This will be used for all analyses.`, 'success');
+            localStorage.setItem('vaastuDirection', appState.currentDirection);
+        }
+
+        // ======================
+        // PLOT ANALYZER
+        // ======================
+
+        function analyzePlot() {
+            const length = parseFloat(document.getElementById('plotLength').value);
+            const width = parseFloat(document.getElementById('plotWidth').value);
+            const shape = document.getElementById('plotShape').value;
+            const slope = document.getElementById('slopeDirection').value;
+            
+            // Validation
+            if (!length || !width || length <= 0 || width <= 0) {
+                showToast("Please enter valid plot dimensions", "error");
+                return;
+            }
+            
+            // Calculate scores
+            let score = 85; // Base score
+            
+            // Shape adjustments
+            if (shape === "square") score += 5;
+            else if (shape === "lshape") score -= 10;
+            else if (shape === "irregular") score -= 15;
+            
+            // Slope adjustments
+            if (slope === "northeast") score += 8;
+            else if (slope === "north" || slope === "east") score += 5;
+            else if (slope === "southwest") score -= 12;
+            else if (slope === "south") score -= 8;
+            
+            // Ratio adjustment
+            const ratio = Math.max(length, width) / Math.min(length, width);
+            if (ratio > 1 && ratio <= 2) score += 3;
+            else if (ratio > 2) score -= 5;
+            
+            // Final score
+            score = Math.max(0, Math.min(100, Math.round(score)));
+            
+            // Update display
+            document.getElementById('vaastuScore').textContent = `${score}%`;
+            document.getElementById('plotRatio').textContent = `${Math.round(width)}:${Math.round(length)}`;
+            document.getElementById('zoneBalance').textContent = `${Math.min(100, score + 5)}%`;
+            
+            // Update assessment
+            let assessment = "";
+            if (score >= 90) {
+                assessment = "Exceptional Vaastu compliance! Your plot has near-perfect cosmic alignment. The dimensions and slope create ideal energy flow for prosperity and well-being.";
+            } else if (score >= 75) {
+                assessment = "Very good Vaastu potential. Your plot with favorable slope shows strong cosmic alignment. Minor remedies will optimize energy flow significantly.";
+            } else if (score >= 60) {
+                assessment = "Moderate Vaastu compliance. Your plot has workable energy patterns but requires specific remedies to balance cosmic forces.";
+            } else {
+                assessment = "Challenging Vaastu configuration. Significant remedies are recommended to transform energy patterns and create harmonious living conditions.";
+            }
+            
+            document.getElementById('plotAssessment').textContent = assessment;
+            
+            // Show results
+            document.getElementById('plotResults').classList.add('active');
+            
+            // Save data
+            appState.plotData = {
+                length,
+                width,
+                shape,
+                slope,
+                score,
+                ratio: ratio.toFixed(2),
+                assessment
+            };
+            
+            showToast(`Plot analysis complete! Vaastu score: ${score}/100`, 'success');
+        }
+
+        function savePlotAnalysis() {
+            if (appState.plotData) {
+                localStorage.setItem('vaastuPlotAnalysis', JSON.stringify(appState.plotData));
+                showToast("Plot analysis saved successfully!", "success");
+            } else {
+                showToast("Please run plot analysis first", "error");
+            }
+        }
+
+        // ======================
+        // ROOM OPTIMIZER
+        // ======================
+
+        function optimizeRooms() {
+            const entrance = document.getElementById('entranceDirection').value;
+            const rooms = document.getElementById('totalRooms').value;
+            const family = document.getElementById('familyType').value;
+            
+            let layoutHTML = "";
+            
+            if (entrance === "northeast") {
+                layoutHTML = `
+                    <p>Based on your <strong>Northeast-facing entrance</strong> (most auspicious), here's the optimal room placement:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li><strong>Master Bedroom:</strong> Southwest corner for stability and relationship harmony</li>
+                        <li><strong>Kitchen:</strong> Southeast corner for fire element alignment</li>
+                        <li><strong>Living Room:</strong> North or East zone for positive energy flow</li>
+                        ${parseInt(rooms) > 3 ? '<li><strong>Children\'s Room:</strong> Northwest for mental clarity and focus</li>' : ''}
+                        <li><strong>Pooja Room:</strong> Northeast corner for spiritual connection</li>
+                        <li><strong>Bathroom:</strong> Northwest or West side, never in Northeast</li>
+                    </ul>
+                `;
+            } else if (entrance === "east") {
+                layoutHTML = `
+                    <p>Based on your <strong>East-facing entrance</strong> (very auspicious), here's the optimal room placement:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li><strong>Master Bedroom:</strong> Southwest corner</li>
+                        <li><strong>Kitchen:</strong> Southeast corner</li>
+                        <li><strong>Living Room:</strong> Near entrance in East or North zone</li>
+                        <li><strong>Bathroom:</strong> Northwest or West side</li>
+                    </ul>
+                `;
+            } else if (entrance === "south") {
+                layoutHTML = `
+                    <p>Based on your <strong>South-facing entrance</strong> (requires remedies), here's the optimized layout:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li><strong>Master Bedroom:</strong> Southwest corner with head towards south</li>
+                        <li><strong>Kitchen:</strong> Southeast corner, ensure proper ventilation</li>
+                        <li><strong>Living Room:</strong> Create barrier (plants or divider) near entrance</li>
+                        <li><strong>Remedies needed:</strong> Place Om symbol at entrance, use light colors</li>
+                    </ul>
+                `;
+            } else {
+                layoutHTML = `
+                    <p>Based on your <strong>${entrance.charAt(0).toUpperCase() + entrance.slice(1)}-facing entrance</strong>, here's the optimal room placement:</p>
+                    <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li><strong>Master Bedroom:</strong> Southwest zone for stability</li>
+                        <li><strong>Kitchen:</strong> Southeast zone for fire element</li>
+                        <li><strong>Living Room:</strong> ${entrance} zone for positive energy</li>
+                        <li><strong>Other Rooms:</strong> Distribute based on specific needs</li>
+                    </ul>
+                `;
+            }
+            
+            document.getElementById('roomLayout').innerHTML = layoutHTML;
+            document.getElementById('roomResults').classList.add('active');
+            
+            // Save layout
+            appState.roomLayout = {
+                entrance,
+                rooms,
+                family,
+                layout: layoutHTML,
+                timestamp: new Date().toISOString()
+            };
+            
+            showToast("Room layout optimized successfully!", "success");
+        }
+
+        function saveRoomLayout() {
+            if (appState.roomLayout) {
+                localStorage.setItem('vaastuRoomLayout', JSON.stringify(appState.roomLayout));
+                showToast("Room layout saved successfully!", "success");
+            } else {
+                showToast("Please generate room layout first", "error");
+            }
+        }
+
+        // ======================
+        // ENERGY VISUALIZER
+        // ======================
+
+        function initializeEnergyVisualizer() {
+            const canvas = document.getElementById('energyCanvas');
+            canvas.innerHTML = '';
+            
+            // Create energy particles
+            for (let i = 0; i < 30; i++) {
+                createEnergyParticle(canvas);
+            }
+            
+            // Update energy metrics
+            const plotScore = appState.plotData?.score || 87;
+            const positive = Math.min(100, plotScore + 5);
+            const negative = 100 - positive;
+            const harmony = Math.min(100, plotScore + 7);
+            
+            document.getElementById('positiveEnergy').textContent = `+${positive}%`;
+            document.getElementById('negativeEnergy').textContent = `-${negative}%`;
+            document.getElementById('harmonyIndex').textContent = `${harmony}%`;
+            
+            // Save energy data
+            appState.energyData = {
+                positive,
+                negative,
+                harmony,
+                timestamp: new Date().toISOString()
+            };
+        }
+
+        function createEnergyParticle(container) {
+            const particle = document.createElement('div');
+            particle.className = 'energy-particle';
+            
+            // Random properties
+            const size = Math.random() * 20 + 10;
+            const isPositive = Math.random() > 0.3;
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const duration = Math.random() * 10 + 10;
+            const delay = Math.random() * 5;
+            
+            // Set styles
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${x}%`;
+            particle.style.top = `${y}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            
+            // Set color based on energy type
+            if (isPositive) {
+                particle.style.background = 'radial-gradient(circle, rgba(255,215,0,0.8), rgba(75,0,130,0.6))';
+                particle.style.boxShadow = '0 0 15px rgba(255,215,0,0.5)';
+            } else {
+                particle.style.background = 'radial-gradient(circle, rgba(220,20,60,0.7), rgba(128,0,0,0.5))';
+                particle.style.boxShadow = '0 0 15px rgba(220,20,60,0.4)';
+            }
+            
+            container.appendChild(particle);
+        }
+
+        function generateEnergyReport() {
+            if (appState.energyData) {
+                localStorage.setItem('vaastuEnergyReport', JSON.stringify(appState.energyData));
+                showToast("Energy report generated and saved!", "success");
+            } else {
+                showToast("Please initialize energy visualizer first", "error");
+            }
+        }
+
+        // ======================
+        // REPORT GENERATOR
+        // ======================
+
+        function updateReportDate() {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('reportDate').textContent = today.toLocaleDateString('en-US', options);
+        }
+
+        function generateReport() {
+            const address = document.getElementById('propertyAddress').value;
+            const reportType = document.getElementById('reportType').value;
+            
+            if (!address.trim()) {
+                showToast("Please enter property address", "error");
+                return;
+            }
+            
+            // Show report container
+            document.getElementById('vaastuReport').classList.add('active');
+            
+            // Save report
+            const report = {
+                address,
+                type: reportType,
+                date: new Date().toISOString(),
+                plotData: appState.plotData,
+                roomLayout: appState.roomLayout,
+                energyData: appState.energyData,
+                id: `VVP-${Date.now()}`
+            };
+            
+            appState.savedReports.push(report);
+            localStorage.setItem('vaastuReports', JSON.stringify(appState.savedReports));
+            
+            showToast("Professional Vaastu report generated successfully!", "success");
+            
+            // Scroll to report
+            document.getElementById('vaastuReport').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function printReport() {
+            window.print();
+        }
+
+        // ======================
+        // UTILITY FUNCTIONS
+        // ======================
+
+        function showToast(message, type = "info") {
+            const toastContainer = document.getElementById('toastContainer');
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            // Add icon based on type
+            let icon = "ℹ️";
+            if (type === "success") icon = "✅";
+            else if (type === "error") icon = "❌";
+            
+            toast.innerHTML = `
+                <span>${icon}</span>
+                <span>${message}</span>
+            `;
+            
+            toastContainer.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => toast.classList.add('show'), 10);
+            
+            // Auto remove after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 400);
+            }, 4000);
+        }
+
+        // ======================
+        // INITIALIZATION
+        // ======================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved data
+            const savedPlot = localStorage.getItem('vaastuPlotAnalysis');
+            const savedRooms = localStorage.getItem('vaastuRoomLayout');
+            const savedReports = localStorage.getItem('vaastuReports');
+            
+            if (savedPlot) {
+                try {
+                    appState.plotData = JSON.parse(savedPlot);
+                } catch (e) {
+                    console.error("Error loading saved plot data:", e);
+                }
+            }
+            
+            if (savedRooms) {
+                try {
+                    appState.roomLayout = JSON.parse(savedRooms);
+                } catch (e) {
+                    console.error("Error loading saved room layout:", e);
+                }
+            }
+            
+            if (savedReports) {
+                try {
+                    appState.savedReports = JSON.parse(savedReports);
+                } catch (e) {
+                    console.error("Error loading saved reports:", e);
+                }
+            }
+            
+            // Update report date
+            updateReportDate();
+            
+            // Show welcome message
+            setTimeout(() => {
+                showToast("Welcome to Vaastu Vision Pro 2026! Your journey to cosmic harmony begins. 🕉️", "success");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
+                     
+                                           
+           
